@@ -6,166 +6,175 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <!--css-->
-    <link rel="stylesheet" href="../css/formulario.css">
+
     <!--fonts-->
     <link rel="stylesheet" href="../css/tarjeta.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <!--css-->
+    <link rel="stylesheet" href="../css/formulario.css">
 </head>
 
 <body>
-<<<<<<< HEAD
-    
-    <form>
-        <div>Carnet de identidad:</div>
-        <div>
-            <input type="text" id="carnet">
+    <div class="form">
+        <div class="title">Introduzca los datos de su licencia </div>
+
+        <div class="input-container ic1">
+            <input id="carnet" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="carnet" class="placeholder">carnet</label>
         </div>
-        <div>Código certificado médico:</div>
-        <div>
-            <input type="text" id="medico">
+        <div class="input-container ic2">
+            <input id="medico" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="medico" class="placeholder">Certificado Medico</label>
         </div>
-        <div>Código antecedentes de tránsito:</div>
-        <div>
-            <input type="text" id="transito">
+        <div class="input-container ic3">
+            <input id="transito" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="transito" class="placeholder">Cod. antecedentes de transito</label>
         </div>
-        <div>Nacionalidad:</div>
-        <div>
-            <input type="text" id="nacionalidad">
+        <div class="input-container ic4">
+            <input id="nacionalidad" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="nacionalidad" class="placeholder">Nacionalidad</label>
         </div>
-        <div>Sexo:</div>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+        <div class="input-container ic5">
+            Sexo:
             <input type="radio" id="mujer" value="mujer" checked name="sexo"><label for="mujer">Mujer</label>
             <input type="radio" id="hombre" value="hombre" name="sexo"><label for="hombre">Hombre</label>
         </div>
-        <div>Nombres:</div>
+        <div class="input-container ic6">
+            <input id="nombres" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="nombres" class="placeholder">Nombres</label>
+        </div>
+        <div class="input-container ic7">
+            <input id="apellidos" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="apellidos" class="placeholder">Apellidos</label>
+        </div>
+        <div class="input-container ic8">
+            <input id="nacimiento" class="input" type="date" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="nacimiento" class="placeholder">Fecha de Nacimiento</label>
+        </div>
+        <div class="input-container ic8">
+            <input id="emision" class="input" type="date" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="emision" class="placeholder">Fecha de Emision</label>
+        </div>
+        <div class="input-container ic9">
+            <input id="vencimiento" class="input" type="date" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="vencimiento" class="placeholder">Fecha de Vencimiento</label>
+        </div>
+        <div class="input-container ic10">
+            <input id="grupoS" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="grupoS" class="placeholder">Grupo sanguineo</label>
+        </div>
+        <div class="input-container ic11">
+            Audifono:
+            <input type="radio" id="ausi" value="Si" checked name="audifonos"><label for="ausi">Si</label>
+            <input type="radio" id="auno" value="No" name="audifonos"><label for="auno">No</label>
+        </div>
+        <div class="input-container ic12">
+            Lentes:
+            <input type="radio" id="lsi" value="Si" checked name="Lentes"><label for="lsi">Si</label>
+            <input type="radio" id="lno" value="No" name="Lentes"><label for="lno">No</label>
+        </div>
         <div>
-            <input type="text" id="nombres">
-        </div>
-        <div>Apellidos:</div>
-        <div>
-            <input type="text" id="apellidos">
-        </div>
-        <div>Fecha de nacimiento:</div>
-        <div>
-            <input type="date" id="nacimiento">
-        </div>
-        <div>Fecha de emisión:</div>
-        <div>
-            <input type="date" id="emision">
-        </div>
-        <div>Fecha de vencimiento:</div>
-        <div>
-            <input type="date" id="vencimiento">
-        </div>
-        <div>Grupo sanguíneo:</div>
-        <div>
-            <input type="text" id="grupoS">
-        </div>
-        <div>Audífonos:</div>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
-            <input type="radio" id="ausi" value="Si" checked name="audifonos"><label for="mujer">Si</label>
-            <input type="radio" id="auno" value="No" name="audifonos"><label for="hombre">No</label>
-        </div>
-        <div>Lentes:</div>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
-            <input type="radio" id="lsi" value="Si" checked name="lentes"><label for="mujer">Si</label>
-            <input type="radio" id="lno" value="No" name="lentes"><label for="hombre">No</label>
-        </div>
-        <div></div>
-        <div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                 onclick="enviar()">
                 Obtenga su licencia
             </button>
             <!-- <input type="button" value="Confirmar" onclick="enviar()"> -->
         </div>
-    </form>
 
+    </div>
 
-
-    <!-- Modal -->
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Su licencia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="wrapper">
-                        <div class="tarjeta">
-                            <div id="parte1">
-                                <div class="tarjeta__image">
-                                    <img src="../images/profile.png" alt="barbarian" />
-                                    <p id="campoCI">CI: </p>
-                                </div>
-                            </div>
-
-                            <div id="descripcion">
-                                <div class="tarjeta_name">Licencia de conducir</div>
-                                <ul>
-                                    <li>Nombre: <span id="campoNombre"></span></li>
-                                    <li>Fecha de nacimiento: <span id="campoNacimiento"></span> </li>
-                                    <li>Nacionalidad: <span id="campoNacionalidad"></span></li>
-                                    <li>Sexo: <span id="campoS"></span></li>
-                                    <li>Nro de licencia: <span id="campoNLicencia"></span></li>
-                                </ul>
-                            </div>
-                        </div>
+        <!-- Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Su licencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="wrapper">
-                        <div class="tarjeta">
-                            <div id="parte1">
-                                <div class="tarjeta__image">
-                                    <img src="../images/qrcode_github.com.png" alt="barbarian" />
+                    <div class="modal-body">
+                        <div class="wrapper">
+                            <div class="tarjeta">
+                                <div id="parte1">
+                                    <div class="tarjeta__image">
+                                        <img src="../images/profile.png" alt="barbarian" />
+                                        <p id="campoCI">CI: </p>
+                                    </div>
+                                </div>
+
+                                <div id="descripcion">
+                                    <div class="tarjeta_name">Licencia de conducir</div>
+                                    <ul>
+                                        <li>Nombre: <span id="campoNombre"></span></li>
+                                        <li>Fecha de nacimiento: <span id="campoNacimiento"></span> </li>
+                                        <li>Nacionalidad: <span id="campoNacionalidad"></span></li>
+                                        <li>Sexo: <span id="campoS"></span></li>
+                                        <li>Nro de licencia: <span id="campoNLicencia"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="tarjeta">
+                                <div id="parte1">
+                                    <div class="tarjeta__image">
+                                        <img src="../images/qrcode_github.com.png" alt="barbarian" />
+
+                                    </div>
+                                </div>
+
+                                <div id="descripcion">
+                                    <ul>
+                                        <li>Fecha de emisión: </li>
+                                        <span id="campoEmision">dato1</span>
+                                        <li>Fecha de vencimiento: </li>
+                                        <span id="campoVencimiento">dato2</span>
+                                    </ul>
+                                </div>
+                                <div id="info-inferior">
+                                    <table>
+                                        <thead>
+                                            <th>Grupo S.</th>
+                                            <th>Audifonos</th>
+                                            <th>Lentes</th>
+                                        </thead>
+                                        <tr>
+                                            <td id="campoTSangre">sangre</td>
+                                            <td id="campoAudi">si</td>
+                                            <td id="campoLentes">si</td>
+
+                                        </tr>
+                                    </table>
 
                                 </div>
                             </div>
 
-                            <div id="descripcion">
-                                <ul>
-                                    <li>Fecha de emisión: </li>
-                                    <span id="campoEmision">dato1</span>
-                                    <li>Fecha de vencimiento: </li>
-                                    <span id="campoVencimiento">dato2</span>
-                                </ul>
-                            </div>
-                            <div id="info-inferior">
-                                <table>
-                                    <thead>
-                                        <th>Grupo S.</th>
-                                        <th>Audifonos</th>
-                                        <th>Lentes</th>
-                                    </thead>
-                                    <tr>
-                                        <td id="campoTSangre">sangre</td>
-                                        <td id="campoAudi">si</td>
-                                        <td id="campoLentes">si</td>
+                        </div><!-- end wrapper -->
 
-                                    </tr>
-                                </table>
-
-                            </div>
-                        </div>
-
-                    </div><!-- end wrapper -->
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-            crossorigin="anonymous"></script>
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                crossorigin="anonymous"></script>
 
             <script>
                 function enviar() {
@@ -183,36 +192,36 @@
                     var emision = document.getElementById("emision").value;
                     var vencimiento = document.getElementById("vencimiento").value;
                     var grupoS = document.getElementById("grupoS").value;
-        
+
                     //Campos
-                    document.getElementById("campoCI").innerText="CI: "+ci;
-                    document.getElementById("campoNombre").innerText=nombres+" "+apellidos;
-                    document.getElementById("campoNacimiento").innerText=nacimiento;
-                    document.getElementById("campoNacionalidad").innerText=nacionalidad;
-                    
+                    document.getElementById("campoCI").innerText = "CI: " + ci;
+                    document.getElementById("campoNombre").innerText = nombres + " " + apellidos;
+                    document.getElementById("campoNacimiento").innerText = nacimiento;
+                    document.getElementById("campoNacionalidad").innerText = nacionalidad;
+
                     document.getElementById("campoNLicencia").innerText = getRandomInt(1000000);
                     document.getElementById("campoEmision").innerText = emision;
                     document.getElementById("campoVencimiento").innerText = vencimiento;
                     //sexo
-                    if(document.getElementById("mujer").checked==true){
-                        document.getElementById("campoS").innerText="Femenino";
-                    }else{
-                        document.getElementById("campoS").innerText="Masculino";
+                    if (document.getElementById("mujer").checked == true) {
+                        document.getElementById("campoS").innerText = "Femenino";
+                    } else {
+                        document.getElementById("campoS").innerText = "Masculino";
 
                     }
                     //lentes
-                    if(document.getElementById("lsi").checked==true){
-                        document.getElementById("campoLentes").innerText="SI";
-                    }else{
-                        document.getElementById("campoLentes").innerText="NO";
+                    if (document.getElementById("lsi").checked == true) {
+                        document.getElementById("campoLentes").innerText = "SI";
+                    } else {
+                        document.getElementById("campoLentes").innerText = "NO";
 
                     }
 
                     //Audifonos
-                    if(document.getElementById("ausi").checked==true){
-                        document.getElementById("campoAudi").innerText="SI";
-                    }else{
-                        document.getElementById("campoAudi").innerText="NO";
+                    if (document.getElementById("ausi").checked == true) {
+                        document.getElementById("campoAudi").innerText = "SI";
+                    } else {
+                        document.getElementById("campoAudi").innerText = "NO";
 
                     }
                     document.getElementById("campoTSangre").innerText = grupoS;
@@ -221,10 +230,10 @@
                 //Generar aleatorio
                 function getRandomInt(max) {
                     return Math.floor(Math.random() * max);
-                    }
+                }
 
             </script>
-
+        
 
 </body>
 
