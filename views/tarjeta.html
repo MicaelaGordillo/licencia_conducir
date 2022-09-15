@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/tarjeta.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="slide-container">
+
+        
+        <div class="wrapper">
+            <div class="tarjeta">
+                <div id="parte1">
+                    <div class="tarjeta__image">
+                        <img src="../images/qrcode_github.com.png" alt="barbarian" />
+
+                    </div>
+                </div>
+
+                <div id="descripcion">
+                    <ul>
+                        <li>Fecha de emisión: </li>
+                        <span id="campoEmision">dato1</span>
+                        <li>Fecha de vencimiento: </li>
+                        <span id="campoVencimiento">dato2</span>
+                    </ul>
+                </div>
+                <div id="info-inferior">
+                    <table>
+                        <thead>
+                            <th>Grupo S.</th>
+                            <th>Audifonos</th>
+                            <th>Lentes</th>
+                        </thead>
+                        <tr>
+                            <td id="campoTSangre">sangre</td>
+                            <td id="campoAudi">si</td>
+                            <td id="campoLentes">si</td>
+
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+        </div><!-- end wrapper -->
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+
+    <!-- modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Su licencia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrapper">
+                        <div class="tarjeta">
+                            <div id="parte1">
+                                <div class="tarjeta__image">
+                                    <img src="../images/profile.png" alt="barbarian" />
+                                    <p id="campoCI">9888</p>
+                                </div>
+                            </div>
+            
+                            <div id="descripcion">
+                                <div class="tarjeta_name">Licencia de conducir</div>
+                                <ul>
+                                    <li>Nombre: <span id="campoNombre"></span></li>
+                                    <li>Fecha de nacimiento: <span id="campoNacimiento"></span> </li>
+                                    <li>Nacionalidad: <span id="campoNacionalidad"></span></li>
+                                    <li>Sexo: <span id="campoS"></span></li>
+                                    <li>Nro de licencia: <span id="campoNLicencia"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>
