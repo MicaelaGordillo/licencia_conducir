@@ -8,11 +8,22 @@
 }
 /*Formulario*/
 form {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    display: block;
-    text-align: center;
+    margin: 5% 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: 'Lato', sans-serif;
 }
 form div {
-    margin-bottom: 2%;
+    margin-bottom: 5%;
+}
+input, select {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'Urbanist', sans-serif;
+    color: black;
+    outline: none;
+    flex: none;
+    background-color: rgb(211, 211, 211);
 }

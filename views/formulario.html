@@ -7,6 +7,8 @@
     <title>Formulario</title>
     <!--css-->
     <link rel="stylesheet" href="../css/formulario.css">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <script>
@@ -44,60 +46,64 @@
         }
     </script>
     <form>
+        <div>Carnet de identidad:</div>
         <div>
-            Carnet de identidad:
             <input type="text" id="carnet">
         </div>
+        <div>Código certificado médico:</div>
         <div>
-            Código certificado médico:
             <input type="text" id="medico">
         </div>
+        <div>Código antecedentes de tránsito:</div>
         <div>
-            Código antecedentes de tránsito:
             <input type="text" id="transito">
         </div>
+        <div>Nacionalidad:</div>
         <div>
-            Nacionalidad:
             <input type="text" id="nacionalidad">
         </div>
-        <div>
-            Sexo:
+        <div>Sexo:</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
             <input type="radio" id="mujer" value="mujer" checked name="sexo"><label for="mujer">Mujer</label>
             <input type="radio" id="hombre" value="hombre" name="sexo"><label for="hombre">Hombre</label>
         </div>
+        <div>Nombres:</div>
         <div>
-            Nombres:
             <input type="text" id="nombres">
         </div>
+        <div>Apellidos:</div>
         <div>
-            Apellidos:
             <input type="text" id="apellidos">
         </div>
+        <div>Fecha de nacimiento:</div>
         <div>
-            Fecha de nacimiento:
             <input type="date" id="nacimiento">
         </div>
+        <div>Fecha de emisión:</div>
         <div>
-            Fecha de emisión:
             <input type="date" id="emision">
         </div>
+        <div>Fecha de vencimiento:</div>
         <div>
-            Fecha de vencimiento:
             <input type="date" id="vencimiento">
         </div>
+        <div>Grupo sanguíneo:</div>
         <div>
-            Grupo sanguíneo :
             <input type="text" id="grupoS">
         </div>
-        <div>
-            Audífonos:
+        <div>Audífonos:</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
             <input type="radio" id="ausi" value="Si" checked name="audifonos"><label for="mujer">Si</label>
             <input type="radio" id="auno" value="No" name="audifonos"><label for="hombre">No</label>
         </div>
-        <div>
-            Lentes:
+        <div>Lentes:</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
             <input type="radio" id="lsi" value="Si" checked name="lentes"><label for="mujer">Si</label>
             <input type="radio" id="lno" value="No" name="lentes"><label for="hombre">No</label>
+        </div>
+        <div></div>
+        <div>
+            <input type="button" value="Confirmar" onclick="enviar()">
         </div>
     </form>
 </body>
