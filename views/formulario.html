@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!--css-->
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+<body>
+    <script>
+        function enviar(){
+            var carnet = document.getElementById("carnet").value;
+            var medico = document.getElementById("medico").value;
+            var transito = document.getElementById("transito").value;
+            var nacionalidad = document.getElementById("nacionalidad").value;
+            var sexo = $("input[type=radio][name=sexo]:checked").value;
+            var nombres = document.getElementById("nombres").value;
+            var apellidos = document.getElementById("apellidos").value;
+            var nacimiento = document.getElementById("nacimiento").value;
+            var emision = document.getElementById("emision").value;
+            var vencimiento = document.getElementById("vencimiento").value;
+            var nacimiento = document.getElementById("nacimiento").value;
+            var emision = document.getElementById("emision").value;
+            var vencimiento = document.getElementById("vencimiento").value;
+            var grupoS = document.getElementById("grupoS").value;
+            var audifonos = $("input[type=radio][name=audifonos]:checked").value;
+            var lentes = $("input[type=radio][name=lentes]:checked").value;
+            var registro = [];
+            registro.push(carnet);
+            registro.push(medico);
+            registro.push(transito);
+            registro.push(nacionalidad);
+            registro.push(sexo);
+            registro.push(nombres);
+            registro.push(apellidos);
+            registro.push(nacimiento);
+            registro.push(emision);
+            registro.push(vencimiento);
+            registro.push(grupoS);
+            registro.push(audifonos);
+            registro.push(lentes);
+        }
+    </script>
+    <form>
+        <div>
+            Carnet de identidad:
+            <input type="text" id="carnet">
+        </div>
+        <div>
+            Código certificado médico:
+            <input type="text" id="medico">
+        </div>
+        <div>
+            Código antecedentes de tránsito:
+            <input type="text" id="transito">
+        </div>
+        <div>
+            Nacionalidad:
+            <input type="text" id="nacionalidad">
+        </div>
+        <div>
+            Sexo:
+            <input type="radio" id="mujer" value="mujer" checked name="sexo"><label for="mujer">Mujer</label>
+            <input type="radio" id="hombre" value="hombre" name="sexo"><label for="hombre">Hombre</label>
+        </div>
+        <div>
+            Nombres:
+            <input type="text" id="nombres">
+        </div>
+        <div>
+            Apellidos:
+            <input type="text" id="apellidos">
+        </div>
+        <div>
+            Fecha de nacimiento:
+            <input type="date" id="nacimiento">
+        </div>
+        <div>
+            Fecha de emisión:
+            <input type="date" id="emision">
+        </div>
+        <div>
+            Fecha de vencimiento:
+            <input type="date" id="vencimiento">
+        </div>
+        <div>
+            Grupo sanguíneo :
+            <input type="text" id="grupoS">
+        </div>
+        <div>
+            Audífonos:
+            <input type="radio" id="ausi" value="Si" checked name="audifonos"><label for="mujer">Si</label>
+            <input type="radio" id="auno" value="No" name="audifonos"><label for="hombre">No</label>
+        </div>
+        <div>
+            Lentes:
+            <input type="radio" id="lsi" value="Si" checked name="lentes"><label for="mujer">Si</label>
+            <input type="radio" id="lno" value="No" name="lentes"><label for="hombre">No</label>
+        </div>
+    </form>
+</body>
+</html>

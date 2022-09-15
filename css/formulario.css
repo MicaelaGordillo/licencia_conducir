@@ -1,0 +1,18 @@
+/*Quitar los estilos generales*/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*Formulario*/
+form {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: block;
+    text-align: center;
+}
+form div {
+    margin-bottom: 2%;
+}
