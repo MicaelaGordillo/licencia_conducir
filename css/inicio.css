@@ -25,12 +25,21 @@ section.principal-view{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 220px;
+    width: 160px;
+    background-color: #0D00AB;
+    
+}
+.navbar .logo2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px; 
+    
 }
 .navbar .logo img{ 
     height: 60px;
 }
-.logo span{
+.logo2 span{
     font-size: 19px;
     color: #293462;
     font-weight: bold;
