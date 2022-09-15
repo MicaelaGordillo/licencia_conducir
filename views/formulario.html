@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,43 +9,15 @@
     <!--css-->
     <link rel="stylesheet" href="../css/formulario.css">
     <!--fonts-->
+    <link rel="stylesheet" href="../css/tarjeta.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <script>
-        function enviar(){
-            var carnet = document.getElementById("carnet").value;
-            var medico = document.getElementById("medico").value;
-            var transito = document.getElementById("transito").value;
-            var nacionalidad = document.getElementById("nacionalidad").value;
-            var sexo = $("input[type=radio][name=sexo]:checked").value;
-            var nombres = document.getElementById("nombres").value;
-            var apellidos = document.getElementById("apellidos").value;
-            var nacimiento = document.getElementById("nacimiento").value;
-            var emision = document.getElementById("emision").value;
-            var vencimiento = document.getElementById("vencimiento").value;
-            var nacimiento = document.getElementById("nacimiento").value;
-            var emision = document.getElementById("emision").value;
-            var vencimiento = document.getElementById("vencimiento").value;
-            var grupoS = document.getElementById("grupoS").value;
-            var audifonos = $("input[type=radio][name=audifonos]:checked").value;
-            var lentes = $("input[type=radio][name=lentes]:checked").value;
-            var registro = [];
-            registro.push(carnet);
-            registro.push(medico);
-            registro.push(transito);
-            registro.push(nacionalidad);
-            registro.push(sexo);
-            registro.push(nombres);
-            registro.push(apellidos);
-            registro.push(nacimiento);
-            registro.push(emision);
-            registro.push(vencimiento);
-            registro.push(grupoS);
-            registro.push(audifonos);
-            registro.push(lentes);
-        }
-    </script>
+    
     <form>
         <div>Carnet de identidad:</div>
         <div>
@@ -103,8 +76,154 @@
         </div>
         <div></div>
         <div>
-            <input type="button" value="Confirmar" onclick="enviar()">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                onclick="enviar()">
+                Obtenga su licencia
+            </button>
+            <!-- <input type="button" value="Confirmar" onclick="enviar()"> -->
         </div>
     </form>
+
+
+
+    <!-- Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Su licencia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrapper">
+                        <div class="tarjeta">
+                            <div id="parte1">
+                                <div class="tarjeta__image">
+                                    <img src="../images/profile.png" alt="barbarian" />
+                                    <p id="campoCI">CI: </p>
+                                </div>
+                            </div>
+
+                            <div id="descripcion">
+                                <div class="tarjeta_name">Licencia de conducir</div>
+                                <ul>
+                                    <li>Nombre: <span id="campoNombre"></span></li>
+                                    <li>Fecha de nacimiento: <span id="campoNacimiento"></span> </li>
+                                    <li>Nacionalidad: <span id="campoNacionalidad"></span></li>
+                                    <li>Sexo: <span id="campoS"></span></li>
+                                    <li>Nro de licencia: <span id="campoNLicencia"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="tarjeta">
+                            <div id="parte1">
+                                <div class="tarjeta__image">
+                                    <img src="../images/qrcode_github.com.png" alt="barbarian" />
+
+                                </div>
+                            </div>
+
+                            <div id="descripcion">
+                                <ul>
+                                    <li>Fecha de emisión: </li>
+                                    <span id="campoEmision">dato1</span>
+                                    <li>Fecha de vencimiento: </li>
+                                    <span id="campoVencimiento">dato2</span>
+                                </ul>
+                            </div>
+                            <div id="info-inferior">
+                                <table>
+                                    <thead>
+                                        <th>Grupo S.</th>
+                                        <th>Audifonos</th>
+                                        <th>Lentes</th>
+                                    </thead>
+                                    <tr>
+                                        <td id="campoTSangre">sangre</td>
+                                        <td id="campoAudi">si</td>
+                                        <td id="campoLentes">si</td>
+
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div><!-- end wrapper -->
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+
+            <script>
+                function enviar() {
+                    //Variables
+                    var ci = document.getElementById("carnet").value;
+                    var medico = document.getElementById("medico").value;
+                    var transito = document.getElementById("transito").value;
+                    var nacionalidad = document.getElementById("nacionalidad").value;
+                    var nombres = document.getElementById("nombres").value;
+                    var apellidos = document.getElementById("apellidos").value;
+                    var nacimiento = document.getElementById("nacimiento").value;
+                    var emision = document.getElementById("emision").value;
+                    var vencimiento = document.getElementById("vencimiento").value;
+                    var nacimiento = document.getElementById("nacimiento").value;
+                    var emision = document.getElementById("emision").value;
+                    var vencimiento = document.getElementById("vencimiento").value;
+                    var grupoS = document.getElementById("grupoS").value;
+        
+                    //Campos
+                    document.getElementById("campoCI").innerText="CI: "+ci;
+                    document.getElementById("campoNombre").innerText=nombres+" "+apellidos;
+                    document.getElementById("campoNacimiento").innerText=nacimiento;
+                    document.getElementById("campoNacionalidad").innerText=nacionalidad;
+                    
+                    document.getElementById("campoNLicencia").innerText = getRandomInt(1000000);
+                    document.getElementById("campoEmision").innerText = emision;
+                    document.getElementById("campoVencimiento").innerText = vencimiento;
+                    //sexo
+                    if(document.getElementById("mujer").checked==true){
+                        document.getElementById("campoS").innerText="Femenino";
+                    }else{
+                        document.getElementById("campoS").innerText="Masculino";
+
+                    }
+                    //lentes
+                    if(document.getElementById("lsi").checked==true){
+                        document.getElementById("campoLentes").innerText="SI";
+                    }else{
+                        document.getElementById("campoLentes").innerText="NO";
+
+                    }
+
+                    //Audifonos
+                    if(document.getElementById("ausi").checked==true){
+                        document.getElementById("campoAudi").innerText="SI";
+                    }else{
+                        document.getElementById("campoAudi").innerText="NO";
+
+                    }
+                    document.getElementById("campoTSangre").innerText = grupoS;
+
+                }
+                //Generar aleatorio
+                function getRandomInt(max) {
+                    return Math.floor(Math.random() * max);
+                    }
+
+            </script>
+
 </body>
+
 </html>
